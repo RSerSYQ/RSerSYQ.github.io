@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loading…</title>
+  <meta name="description" content="Academic homepage" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="id">
+        <div class="avatar" id="avatarBox">
+          <!-- 放 avatar.jpg 到同目录会自动显示 -->
+          <span>Avatar</span>
+        </div>
+        <div class="headtext">
+          <h1 id="name"></h1>
+          <div class="sub" id="subtitle"></div>
+          <div class="meta" id="meta"></div>
+          <div class="links" id="links"></div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav" id="nav"></nav>
+
+    <section id="bio"><h2>简介</h2><div class="card" id="bioBox"></div></section>
+    <section id="interests"><h2>研究方向</h2><div class="card" id="interestBox"></div></section>
+    <section id="news"><h2>动态</h2><div class="card" id="newsBox"></div></section>
+    <section id="pubs"><h2>论文</h2><div class="card" id="pubBox"></div></section>
+    <section id="projects"><h2>项目与报告</h2><div class="card" id="projBox"></div></section>
+    <section id="awards"><h2>荣誉奖项</h2><div class="card" id="awardBox"></div></section>
+    <section id="skills"><h2>技能</h2><div class="card" id="skillBox"></div></section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> <span id="name2"></span></div>
+      <div class="muted">Last updated: <span id="updated"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    const el = (id) => document.getElementById(id);
+    const esc = (s) => (s ?? "").toString()
+      .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+
+    function li(items){
+      return `<ul>${items.map(x=>`<li>${x}</li>`).join("")}</ul>`;
+    }
+
+    function navBuild(){
+      const items = [
+        ["bio","简介"],["interests","研究方向"],["news","动态"],["pubs","论文"],
+        ["projects","项目与报告"],["awards","荣誉奖项"],["skills","技能"]
+      ];
+      el("nav").innerHTML = `<div class="navrow">${
+        items.map(([id,t])=>`<a href="#${id}">${t}</a>`).join("")
+      }</div>`;
+    }
+
+    async function main(){
+      navBuild();
+      const res = await fetch("data.json", {cache:"no-store"});
+      const d = await res.json();
+
+      // Title + header
+      document.title = `${d.name_cn || ""} | ${d.title || ""}`.trim();
+      el("name").textContent = `${d.name_cn || ""} / ${d.name_en || ""}`.trim();
+      el("name2").textContent = d.name_en || d.name_cn || "";
+      el("subtitle").textContent = `${d.title || ""} · ${d.affiliation || ""}`.trim();
+      el("meta").innerHTML = [
+        d.location ? `Location: ${esc(d.location)}` : "",
+        d.email ? `Email: <a href="mailto:${esc(d.email)}">${esc(d.email)}</a>` : ""
+      ].filter(Boolean).join(" · ");
+
+      el("links").innerHTML = (d.links || []).map(x =>
+        `<a class="chip" href="${esc(x.url)}" target="_blank" rel="noreferrer">${esc(x.label)}</a>`
+      ).join("");
+
+      // Avatar auto
+      const img = new Image();
+      img.src = "avatar.jpg";
+      img.onload = () => {
+        el("avatarBox").innerHTML = "";
+        img.alt = d.name_en || d.name_cn || "avatar";
+        el("avatarBox").appendChild(img);
+      };
+
+      // Sections
+      el("bioBox").innerHTML = (d.bio || []).map(p=>`<p>${esc(p)}</p>`).join("");
+
+      el("interestBox").innerHTML = li((d.research_interests||[]).map(x=>esc(x)));
+
+      el("newsBox").innerHTML = li((d.news||[]).map(n=>`<span class="k">${esc(n.date)}</span> ${esc(n.text)}`));
+
+      // Publications grouped by year
+      const pubs = (d.publications || []).slice().sort((a,b)=>(b.year||0)-(a.year||0));
+      el("pubBox").innerHTML = pubs.map(p=>{
+        const links = [
+          p.pdf && p.pdf !== "#" ? `<a href="${esc(p.pdf)}" target="_blank" rel="noreferrer">PDF</a>` : "",
+          p.code && p.code !== "#" ? `<a href="${esc(p.code)}" target="_blank" rel="noreferrer">Code</a>` : ""
+        ].filter(Boolean).join(" · ");
+        return `
+          <div class="pub">
+            <div class="t">${esc(p.title)}</div>
+            <div class="v">${esc(p.authors)} · <i>${esc(p.venue)}</i> (${esc(p.year)}) ${p.note? "· "+esc(p.note):""}
+              ${links ? "· " + links : ""}
+            </div>
+          </div>`;
+      }).join("");
+
+      el("projBox").innerHTML = li((d.projects||[]).map(p=>{
+        const a = p.link && p.link !== "#" ? ` <a href="${esc(p.link)}" target="_blank" rel="noreferrer">Link</a>` : "";
+        return `<b>${esc(p.title)}</b> — <span class="k">${esc(p.role||"")}</span><br/>${esc(p.desc||"")}${a}`;
+      }));
+
+      el("awardBox").innerHTML = li((d.awards||[]).map(x=>esc(x)));
+      el("skillBox").innerHTML = li((d.skills||[]).map(x=>esc(x)));
+
+      el("year").textContent = new Date().getFullYear();
+      el("updated").textContent = d.last_updated || "";
+    }
+
+    main().catch(err=>{
+      document.body.innerHTML = `<pre style="padding:24px;">Failed to load data.json\n\n${err}</pre>`;
+      console.error(err);
+    });
+  </script>
+</body>
+</html>
