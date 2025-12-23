@@ -2,49 +2,109 @@
   "name_cn": "尚逸群",
   "name_en": "Yiqun Shang",
   "title": "PhD Candidate · Geography / Remote Sensing",
-  "affiliation": "IGSNRR, CAS × University of Nottingham / UNNC (joint PhD)",
-  "location": "Nottingham, UK",
+  "affiliation": "IGSNRR, CAS × University of Nottingham Ningbo China (UNNC)",
+  "location": "Beijing, China; Ningbo, China; Nottingham, UK",
   "email": "sd_syq@163.com",
   "links": [
-    { "label": "Google Scholar", "url": "#" },
-    { "label": "ORCID", "url": "#" },
-    { "label": "GitHub", "url": "https://github.com/RSerSYQ" },
-    { "label": "CV (PDF)", "url": "cv.pdf" }
+    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=5Pi8AMEAAAAJ&hl=zh-CN" },
+    { "label": "ORCID", "url": "https://orcid.org/0000-0002-0166-5130" },
   ],
   "bio": [
     "I am a joint PhD student (2023–2027, expected) working on the Food–Water–Ecosystem (F–W–E) nexus in China.",
-    "My research integrates remote sensing, reanalysis/hydrological products and spatial statistics to understand how agricultural changes affect groundwater sustainability and ecosystem risks."
+    "My research integrates remote sensing, LUCC-related products and spatial statistics to understand how agricultural changes affect water and ecosystem."
   ],
   "research_interests": [
-    "Crop water requirement & irrigation demand",
-    "Groundwater anomalies (GRACE/GLDAS) and sustainability assessment",
-    "China-scale soil erosion modelling (RUSLE) and driver attribution",
-    "GeoAI / big Earth data analytics (GEE, Python)"
+    "Crop water requirement",
+    "Soil erosion",
+    "Crop residue burning"
   ],
   "news": [
-    { "date": "2025-12", "text": "One paper accepted/published in Journal of Hydrology." },
-    { "date": "2025-03", "text": "Contributed to the UN SDG Big Earth Data Report 2024." }
+    { "date": "2025-08", "text": "One paper accepted in Journal of Hydrology." },
+    { "date": "2024-12", "text": "Contributed to the UN SDG Big Earth Data Report 2024." }
   ],
-  "publications": [
-    {
-      "year": 2025,
-      "title": "Groundwater Depletion in China’s Granary: The Unintended Consequences of Cropping Pattern Shifts",
-      "authors": "Shang Y; Dong J*; Fu P; et al.",
-      "venue": "Journal of Hydrology",
-      "note": "662(C): 134012",
-      "pdf": "#",
-      "code": "#"
-    },
-    {
-      "year": 2025,
-      "title": "Increased corn cultivation exacerbated crop residue burning in Northeast China in the 21st century",
-      "authors": "Shang Y; Pei Y; Fu P*; et al.",
-      "venue": "Geography and Sustainability",
-      "note": "6(3): 100244",
-      "pdf": "#",
-      "code": "#"
-    }
-  ],
+"publications": [
+  {
+    "year": 2025,
+    "title": "Groundwater depletion in China’s Granary: The unintended consequences of cropping pattern shifts",
+    "authors": "Shang Y; Dong J; Fu P; You N; Zhang X; Di Y; Zhou Y; Chen X; Li Z; Zheng X",
+    "venue": "Journal of Hydrology",
+    "note": "2025-12",
+    "pdf": "https://doi.org/10.1016/j.jhydrol.2025.134012",
+    "code": "#"
+  },
+  {
+    "year": 2025,
+    "title": "Increased corn cultivation exacerbated crop residue burning in Northeast China in the 21st century",
+    "authors": "Shang Y; Pei Y; Fu P; Ren C; Li Z; Ren J; Zheng X; Di Y; Zhou Y; Dong J",
+    "venue": "Geography and Sustainability",
+    "note": "2025-06",
+    "pdf": "https://doi.org/10.1016/j.geosus.2024.09.008",
+    "code": "#"
+  },
+  {
+    "year": 2025,
+    "title": "An effective feature selection approach based on hybrid Grey Wolf Optimizer and Genetic Algorithm for hyperspectral image",
+    "authors": "Shang Y; Zheng M; Li J; Zheng X",
+    "venue": "Scientific Reports",
+    "note": "2025-01-15",
+    "pdf": "https://doi.org/10.1038/s41598-024-84934-8",
+    "code": "#"
+  },
+  {
+    "year": 2023,
+    "title": "A Partitioned and Heterogeneous Land-Use Simulation Model by Integrating CA and Markov Model",
+    "authors": "Wang Q; Liu D; Gao F; Zheng X; Shang Y",
+    "venue": "Land",
+    "note": "2023-02-03",
+    "pdf": "https://doi.org/10.3390/land12020409",
+    "code": "#"
+  },
+  {
+    "year": 2022,
+    "title": "Evaluation of Urban Intensive Land Use Degree with GEE Support: A Case Study in the Pearl River Delta Region, China",
+    "authors": "Shang Y; Liu D; Chen Y",
+    "venue": "Sustainability",
+    "note": "2022-10-16",
+    "pdf": "https://doi.org/10.3390/su142013284",
+    "code": "#"
+  },
+  {
+    "year": 2022,
+    "title": "A Novel Framework for Exploring the Spatial Characteristics of Leisure Tourism Using Multisource Data: A Case Study of Qingdao, China",
+    "authors": "Shang Y",
+    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "note": "2022-08-03",
+    "pdf": "https://doi.org/10.1109/JSTARS.2022.3196002",
+    "code": "#"
+  },
+  {
+    "year": 2022,
+    "title": "A Comparative Analysis of Swarm Intelligence and Evolutionary Algorithms for Feature Selection in SVM-Based Hyperspectral Image Classification",
+    "authors": "Shang Y; Zheng X; Li J; Liu D; Wang P",
+    "venue": "Remote Sensing",
+    "note": "2022-06",
+    "pdf": "https://doi.org/10.3390/rs14133019",
+    "code": "#"
+  },
+  {
+    "year": 2021,
+    "title": "Long-term evaluation on urban intensive land use in five fast-growing cities of northern China with GEE support",
+    "authors": "Shang Y",
+    "venue": "Scientific Reports",
+    "note": "2021-10-20",
+    "pdf": "https://doi.org/10.1038/s41598-021-00285-8",
+    "code": "#"
+  },
+  {
+    "year": 2019,
+    "title": "Characteristics of Ozone Pollution, Regional Distribution and Causes during 2014–2018 in Shandong Province, East China",
+    "authors": "Shang Y",
+    "venue": "Atmosphere",
+    "note": "2019-08-27",
+    "pdf": "https://doi.org/10.3390/atmos10090501",
+    "code": "#"
+  }
+],
   "projects": [
     {
       "title": "UN SDG Big Earth Data Report (2024)",
@@ -61,14 +121,12 @@
   ],
   "awards": [
     "2025 · CAST Young Talent Program (PhD track)",
-    "2025 · CSC scholarship (outbound study support)",
     "2022 · National Scholarship (Graduate)",
     "2023 · Beijing Outstanding Graduate; 2020 · Shandong Outstanding Graduate"
   ],
   "skills": [
     "Google Earth Engine (GEE), Python, MATLAB",
-    "ArcGIS / raster workflows",
-    "Academic writing (SCI first-author publications)"
+    "ArcGIS",
   ],
   "last_updated": "2025-12-23"
 }
