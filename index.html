@@ -13,7 +13,7 @@
       <div class="id">
         <div class="avatar" id="avatarBox">
           <!-- 放 avatar.jpg 到同目录会自动显示 -->
-          <span>Avatar</span>
+          <span>Avatar.jpg</span>
         </div>
         <div class="headtext">
           <h1 id="name"></h1>
@@ -26,9 +26,9 @@
 
     <nav class="nav" id="nav"></nav>
 
-    <section id="bio"><h2>Profile</h2><div class="card" id="bioBox"></div></section>
+    <section id="bio"><h2>About mw</h2><div class="card" id="bioBox"></div></section>
     <section id="interests"><h2>Research Interests</h2><div class="card" id="interestBox"></div></section>
-    <section id="news"><h2>Recent Works</h2><div class="card" id="newsBox"></div></section>
+    <section id="news"><h2>News</h2><div class="card" id="newsBox"></div></section>
     <section id="pubs"><h2>Papers</h2><div class="card" id="pubBox"></div></section>
     <section id="projects"><h2>Projects</h2><div class="card" id="projBox"></div></section>
     <section id="awards"><h2>Rewards</h2><div class="card" id="awardBox"></div></section>
@@ -51,7 +51,7 @@
 
     function navBuild(){
       const items = [
-        ["bio","Profile"],["interests","Research Interests"],["news","Recent Works"],["pubs","Papers"],
+        ["bio","About me"],["interests","Research Interests"],["news","News"],["pubs","Papers"],
         ["projects","Projects"],["awards","Rewards"],["skills","Skills"]
       ];
       el("nav").innerHTML = `<div class="navrow">${
