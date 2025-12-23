@@ -11,14 +11,31 @@
     { "label": "ResearchGate", "url": "https://www.researchgate.net/profile/Yiqun-Shang-2" }
   ],
   "bio": [
-  "I am a joint PhD student (2023–2027, expected) at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences (IGSNRR, CAS), and the University of Nottingham Ningbo China (UNNC).",
-  "My research integrates LUCC-related products and spatial statistics to investigate the Food–Water–Ecosystem (F–W–E) nexus, with a particular focus on the impacts of agricultural activities on local water resources and ecosystems."
+    "I am a joint PhD student (2023–2027, expected) at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences (IGSNRR, CAS), and the University of Nottingham Ningbo China (UNNC).",
+    "My research integrates LUCC-related products and spatial statistics to investigate the Food–Water–Ecosystem (F–W–E) nexus, with a particular focus on the impacts of agricultural activities on local water resources and ecosystems."
+  ],
+  "highlights": [
+    "Groundwater depletion and cropping pattern shifts in Northeast China (Journal of Hydrology, 2025).",
+    "Crop residue burning dynamics and environmental impacts (Geography and Sustainability, 2025).",
+    "China-scale modelling of crop water requirement and agriculture-induced soil erosion (ongoing)."
   ],
   "supervisors": [
-  { "name": "Prof. Dong Jinwei", "affil": "IGSNRR", "url": "https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/zrzy/201703/t20170306_4755253.html" },
-  { "name": "Asso. Prof. Fu Ping", "affil": "UNNC", "url": "https://research.nottingham.edu.cn/en/persons/ping-fu/" },
-  { "name": "Asso. Prof. Ren Jianfeng", "affil": "UNNC", "url": "https://research.nottingham.edu.cn/en/persons/jianfeng-ren/" }
-],
+    {
+      "name": "Prof. Dong Jinwei",
+      "affil": "IGSNRR",
+      "url": "https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/zrzy/201703/t20170306_4755253.html"
+    },
+    {
+      "name": "Assoc. Prof. Fu Ping",
+      "affil": "UNNC",
+      "url": "https://research.nottingham.edu.cn/en/persons/ping-fu/"
+    },
+    {
+      "name": "Assoc. Prof. Ren Jianfeng",
+      "affil": "UNNC",
+      "url": "https://research.nottingham.edu.cn/en/persons/jianfeng-ren/"
+    }
+  ],
   "research_interests": [
     "Crop water requirement",
     "Agriculture-induced soil erosion",
@@ -26,84 +43,85 @@
   ],
   "news": [
     { "date": "2025-08", "text": "One paper accepted in Journal of Hydrology." },
-    { "date": "2025-07", "text": "Started a visiting PhD period (Host Supervisor: Franziska Schrodt and Hannah Cooper) at the University of Nottingham, UK." },
+    { "date": "2025-07", "text": "Started a visiting PhD period at the University of Nottingham, UK." },
+    { "date": "2025-07", "text": "Host supervisors: Franziska Schrodt and Hannah Cooper." },
     { "date": "2024-12", "text": "One paper accepted in Geography and Sustainability." },
     { "date": "2024-10", "text": "Contributed to the UN SDG Big Earth Data Report 2024." }
   ],
-"publications": [
-  {
-    "year": 2025,
-    "title": "Groundwater depletion in China’s Granary: The unintended consequences of cropping pattern shifts",
-    "authors": "Shang Y; Dong J; Fu P; You N; Zhang X; Di Y; Zhou Y; Chen X; Li Z; Zheng X",
-    "venue": "Journal of Hydrology",
-    "note": "2025-12",
-    "pdf": "https://doi.org/10.1016/j.jhydrol.2025.134012",
-    "code": "#"
-  },
-  {
-    "year": 2025,
-    "title": "Increased corn cultivation exacerbated crop residue burning in Northeast China in the 21st century",
-    "authors": "Shang Y; Pei Y; Fu P; Ren C; Li Z; Ren J; Zheng X; Di Y; Zhou Y; Dong J",
-    "venue": "Geography and Sustainability",
-    "note": "2025-06",
-    "pdf": "https://doi.org/10.1016/j.geosus.2024.09.008",
-    "code": "#"
-  },
-  {
-    "year": 2025,
-    "title": "An effective feature selection approach based on hybrid Grey Wolf Optimizer and Genetic Algorithm for hyperspectral image",
-    "authors": "Shang Y; Zheng M; Li J; Zheng X",
-    "venue": "Scientific Reports",
-    "note": "2025-01-15",
-    "pdf": "https://doi.org/10.1038/s41598-024-84934-8",
-    "code": "#"
-  },
-  {
-    "year": 2023,
-    "title": "A Partitioned and Heterogeneous Land-Use Simulation Model by Integrating CA and Markov Model",
-    "authors": "Wang Q; Liu D; Gao F; Zheng X; Shang Y",
-    "venue": "Land",
-    "note": "2023-02-03",
-    "pdf": "https://doi.org/10.3390/land12020409",
-    "code": "#"
-  },
-  {
-    "year": 2022,
-    "title": "Evaluation of Urban Intensive Land Use Degree with GEE Support: A Case Study in the Pearl River Delta Region, China",
-    "authors": "Shang Y; Liu D; Chen Y",
-    "venue": "Sustainability",
-    "note": "2022-10-16",
-    "pdf": "https://doi.org/10.3390/su142013284",
-    "code": "#"
-  },
-  {
-    "year": 2022,
-    "title": "A Novel Framework for Exploring the Spatial Characteristics of Leisure Tourism Using Multisource Data: A Case Study of Qingdao, China",
-    "authors": "Shang Y, Wen C, Bai Y, Hou D",
-    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
-    "note": "2022-08-03",
-    "pdf": "https://doi.org/10.1109/JSTARS.2022.3196002",
-    "code": "#"
-  },
-  {
-    "year": 2022,
-    "title": "A Comparative Analysis of Swarm Intelligence and Evolutionary Algorithms for Feature Selection in SVM-Based Hyperspectral Image Classification",
-    "authors": "Shang Y; Zheng X; Li J; Liu D; Wang P",
-    "venue": "Remote Sensing",
-    "note": "2022-06",
-    "pdf": "https://doi.org/10.3390/rs14133019",
-    "code": "#"
-  },
-  {
-    "year": 2021,
-    "title": "Long-term evaluation on urban intensive land use in five fast-growing cities of northern China with GEE support",
-    "authors": "Shang Y, Zheng X, Han R, Liu W, Xiao F",
-    "venue": "Scientific Reports",
-    "note": "2021-10-20",
-    "pdf": "https://doi.org/10.1038/s41598-021-00285-8",
-    "code": "#"
-  }
-],
+  "publications": [
+    {
+      "year": 2025,
+      "title": "Groundwater depletion in China’s Granary: The unintended consequences of cropping pattern shifts",
+      "authors": "Shang Y; Dong J; Fu P; You N; Zhang X; Di Y; Zhou Y; Chen X; Li Z; Zheng X",
+      "venue": "Journal of Hydrology",
+      "note": "2025-12",
+      "pdf": "https://doi.org/10.1016/j.jhydrol.2025.134012",
+      "code": "#"
+    },
+    {
+      "year": 2025,
+      "title": "Increased corn cultivation exacerbated crop residue burning in Northeast China in the 21st century",
+      "authors": "Shang Y; Pei Y; Fu P; Ren C; Li Z; Ren J; Zheng X; Di Y; Zhou Y; Dong J",
+      "venue": "Geography and Sustainability",
+      "note": "2025-06",
+      "pdf": "https://doi.org/10.1016/j.geosus.2024.09.008",
+      "code": "#"
+    },
+    {
+      "year": 2025,
+      "title": "An effective feature selection approach based on hybrid Grey Wolf Optimizer and Genetic Algorithm for hyperspectral image",
+      "authors": "Shang Y; Zheng M; Li J; Zheng X",
+      "venue": "Scientific Reports",
+      "note": "2025-01-15",
+      "pdf": "https://doi.org/10.1038/s41598-024-84934-8",
+      "code": "#"
+    },
+    {
+      "year": 2023,
+      "title": "A Partitioned and Heterogeneous Land-Use Simulation Model by Integrating CA and Markov Model",
+      "authors": "Wang Q; Liu D; Gao F; Zheng X; Shang Y",
+      "venue": "Land",
+      "note": "2023-02-03",
+      "pdf": "https://doi.org/10.3390/land12020409",
+      "code": "#"
+    },
+    {
+      "year": 2022,
+      "title": "Evaluation of Urban Intensive Land Use Degree with GEE Support: A Case Study in the Pearl River Delta Region, China",
+      "authors": "Shang Y; Liu D; Chen Y",
+      "venue": "Sustainability",
+      "note": "2022-10-16",
+      "pdf": "https://doi.org/10.3390/su142013284",
+      "code": "#"
+    },
+    {
+      "year": 2022,
+      "title": "A Novel Framework for Exploring the Spatial Characteristics of Leisure Tourism Using Multisource Data: A Case Study of Qingdao, China",
+      "authors": "Shang Y; Wen C; Bai Y; Hou D",
+      "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+      "note": "2022-08-03",
+      "pdf": "https://doi.org/10.1109/JSTARS.2022.3196002",
+      "code": "#"
+    },
+    {
+      "year": 2022,
+      "title": "A Comparative Analysis of Swarm Intelligence and Evolutionary Algorithms for Feature Selection in SVM-Based Hyperspectral Image Classification",
+      "authors": "Shang Y; Zheng X; Li J; Liu D; Wang P",
+      "venue": "Remote Sensing",
+      "note": "2022-06",
+      "pdf": "https://doi.org/10.3390/rs14133019",
+      "code": "#"
+    },
+    {
+      "year": 2021,
+      "title": "Long-term evaluation on urban intensive land use in five fast-growing cities of northern China with GEE support",
+      "authors": "Shang Y; Zheng X; Han R; Liu W; Xiao F",
+      "venue": "Scientific Reports",
+      "note": "2021-10-20",
+      "pdf": "https://doi.org/10.1038/s41598-021-00285-8",
+      "code": "#"
+    }
+  ],
   "projects": [
     {
       "title": "UN SDG Big Earth Data Report (2024)",
@@ -119,10 +137,10 @@
     }
   ],
   "awards": [
-    "2025 · CAST Young Talent Program (PhD track)",
-    "2022 · National Scholarship (Graduate)",
-    "2023 · Beijing Outstanding Graduate",
-    "2020 · Shandong Outstanding Graduate"
+    "2025 · CAST Young Talent Program (PhD track) 【中国科协青年科技人才培育工程博士生专项计划】",
+    "2022 · National Scholarship (Graduate) 【研究生国家奖学金】",
+    "2023 · Beijing Outstanding Graduate 【北京市优秀毕业生】",
+    "2020 · Shandong Outstanding Graduate 【山东省优秀毕业生】"
   ],
   "skills": [
     "Google Earth Engine (GEE)",
