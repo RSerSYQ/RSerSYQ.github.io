@@ -10,8 +10,8 @@
     { "label": "ORCID", "url": "https://orcid.org/0000-0002-0166-5130" }
   ],
   "bio": [
-    "I am a joint PhD student (2023–2027, expected) working on the Food–Water–Ecosystem (F–W–E) nexus in China.",
-    "My research integrates remote sensing, LUCC-related products and spatial statistics to understand Food-Water-Ecosystem nexus, specifically, to explore the impact of agriculture on local water resources and ecosystem."
+  "I am a joint PhD student (2023–2027, expected) at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences (IGSNRR, CAS), and the University of Nottingham Ningbo China (UNNC).",
+  "My research integrates LUCC-related products and spatial statistics to investigate the Food–Water–Ecosystem (F–W–E) nexus, with a particular focus on the impacts of agricultural activities on local water resources and ecosystems."
   ],
   "research_interests": [
     "Crop water requirement",
@@ -20,7 +20,7 @@
   ],
   "news": [
     { "date": "2025-08", "text": "One paper accepted in Journal of Hydrology." },
-    { "date": "2024-07", "text": "Started a visiting PhD period at the University of Nottingham, UK." },
+    { "date": "2024-07", "text": "Started a visiting PhD period (Host Supervisor: Franziska Schrodt and Hannah Cooper) at the University of Nottingham, UK." },
     { "date": "2024-12", "text": "One paper accepted in Geography and Sustainability." },
     { "date": "2024-10", "text": "Contributed to the UN SDG Big Earth Data Report 2024." }
   ],
