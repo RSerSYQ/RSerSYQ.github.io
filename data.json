@@ -112,13 +112,16 @@
       "code": "#"
     }
   ],
-  "projects": [
-    {
-      "title": "UN SDG Big Earth Data Report (2024)",
+  "reports":[
+  {    
+      "title": "Big Earth Data in Support of the Sustainable Development Goals 2024",
       "role": "Contributor",
-      "desc": "Co-authored the 'SDGs cross-cutting & integration' chapter and contributed to the China report.",
-      "link": "#"
-    },
+      "desc": "Co-authored the 'Integrated Evaluations and Interactions among SDGs' chapter.",
+      "link": "https://sdgs.un.org/events/big-earth-data-strengthening-potential-digital-technologies-sdgs-post-covid-world-52849"
+    }
+    
+  ]
+  "projects": [
     {
       "title": "NSFC (General Program): Cropping pattern shifts & Food–Water tradeoffs in Northeast China",
       "role": "Contributor",
