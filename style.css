@@ -38,3 +38,5 @@ li{margin:8px 0}
 .pub .t{font-weight:650}
 .pub .v{color:var(--muted); font-size:14px}
 .footer{margin-top:34px; padding-top:16px; border-top:1px solid var(--border); color:var(--muted); font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+#bioBox a { font-weight: 600; }
+
