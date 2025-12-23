@@ -1,0 +1,74 @@
+{
+  "name_cn": "尚逸群",
+  "name_en": "Yiqun Shang",
+  "title": "PhD Candidate · Geography / Remote Sensing",
+  "affiliation": "IGSNRR, CAS × University of Nottingham / UNNC (joint PhD)",
+  "location": "Nottingham, UK",
+  "email": "sd_syq@163.com",
+  "links": [
+    { "label": "Google Scholar", "url": "#" },
+    { "label": "ORCID", "url": "#" },
+    { "label": "GitHub", "url": "https://github.com/RSerSYQ" },
+    { "label": "CV (PDF)", "url": "cv.pdf" }
+  ],
+  "bio": [
+    "I am a joint PhD student (2023–2027, expected) working on the Food–Water–Ecosystem (F–W–E) nexus in China.",
+    "My research integrates remote sensing, reanalysis/hydrological products and spatial statistics to understand how agricultural changes affect groundwater sustainability and ecosystem risks."
+  ],
+  "research_interests": [
+    "Crop water requirement & irrigation demand",
+    "Groundwater anomalies (GRACE/GLDAS) and sustainability assessment",
+    "China-scale soil erosion modelling (RUSLE) and driver attribution",
+    "GeoAI / big Earth data analytics (GEE, Python)"
+  ],
+  "news": [
+    { "date": "2025-12", "text": "One paper accepted/published in Journal of Hydrology." },
+    { "date": "2025-03", "text": "Contributed to the UN SDG Big Earth Data Report 2024." }
+  ],
+  "publications": [
+    {
+      "year": 2025,
+      "title": "Groundwater Depletion in China’s Granary: The Unintended Consequences of Cropping Pattern Shifts",
+      "authors": "Shang Y; Dong J*; Fu P; et al.",
+      "venue": "Journal of Hydrology",
+      "note": "662(C): 134012",
+      "pdf": "#",
+      "code": "#"
+    },
+    {
+      "year": 2025,
+      "title": "Increased corn cultivation exacerbated crop residue burning in Northeast China in the 21st century",
+      "authors": "Shang Y; Pei Y; Fu P*; et al.",
+      "venue": "Geography and Sustainability",
+      "note": "6(3): 100244",
+      "pdf": "#",
+      "code": "#"
+    }
+  ],
+  "projects": [
+    {
+      "title": "UN SDG Big Earth Data Report (2024)",
+      "role": "Contributor",
+      "desc": "Co-authored the 'SDGs cross-cutting & integration' chapter and contributed to the China report.",
+      "link": "#"
+    },
+    {
+      "title": "NSFC (General Program): Cropping pattern shifts & Food–Water tradeoffs in Northeast China",
+      "role": "Researcher",
+      "desc": "Work packages: crop residue burning impacts; water resource mechanism analysis.",
+      "link": "#"
+    }
+  ],
+  "awards": [
+    "2025 · CAST Young Talent Program (PhD track)",
+    "2025 · CSC scholarship (outbound study support)",
+    "2022 · National Scholarship (Graduate)",
+    "2023 · Beijing Outstanding Graduate; 2020 · Shandong Outstanding Graduate"
+  ],
+  "skills": [
+    "Google Earth Engine (GEE), Python, MATLAB",
+    "ArcGIS / raster workflows",
+    "Academic writing (SCI first-author publications)"
+  ],
+  "last_updated": "2025-12-23"
+}
