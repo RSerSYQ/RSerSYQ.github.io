@@ -4,14 +4,14 @@
   "title": "PhD Candidate · Geography / Remote Sensing",
   "affiliation": "IGSNRR, CAS × University of Nottingham Ningbo China (UNNC)",
   "location": "Beijing, China; Ningbo, China; Nottingham, UK",
-  "email": "sd_syq@163.com",
+  "email": "Yiqun.Shang@nottingham.edu.cn",
   "links": [
     { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=5Pi8AMEAAAAJ&hl=zh-CN" },
     { "label": "ORCID", "url": "https://orcid.org/0000-0002-0166-5130" }
   ],
   "bio": [
     "I am a joint PhD student (2023–2027, expected) working on the Food–Water–Ecosystem (F–W–E) nexus in China.",
-    "My research integrates remote sensing, LUCC-related products and spatial statistics to understand how agricultural changes affect water and ecosystem."
+    "My research integrates remote sensing, LUCC-related products and spatial statistics to understand Food-Water-Ecosystem nexus, specifically, to explore the impact of agriculture on local water resources and ecosystem."
   ],
   "research_interests": [
     "Crop water requirement",
@@ -72,7 +72,7 @@
   {
     "year": 2022,
     "title": "A Novel Framework for Exploring the Spatial Characteristics of Leisure Tourism Using Multisource Data: A Case Study of Qingdao, China",
-    "authors": "Shang Y",
+    "authors": "Shang Y, Wen C, Bai Y, Hou D",
     "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
     "note": "2022-08-03",
     "pdf": "https://doi.org/10.1109/JSTARS.2022.3196002",
@@ -90,21 +90,12 @@
   {
     "year": 2021,
     "title": "Long-term evaluation on urban intensive land use in five fast-growing cities of northern China with GEE support",
-    "authors": "Shang Y",
+    "authors": "Shang Y, Zheng X, Han R, Liu W, Xiao F",
     "venue": "Scientific Reports",
     "note": "2021-10-20",
     "pdf": "https://doi.org/10.1038/s41598-021-00285-8",
     "code": "#"
   },
-  {
-    "year": 2019,
-    "title": "Characteristics of Ozone Pollution, Regional Distribution and Causes during 2014–2018 in Shandong Province, East China",
-    "authors": "Shang Y",
-    "venue": "Atmosphere",
-    "note": "2019-08-27",
-    "pdf": "https://doi.org/10.3390/atmos10090501",
-    "code": "#"
-  }
 ],
   "projects": [
     {
@@ -123,10 +114,12 @@
   "awards": [
     "2025 · CAST Young Talent Program (PhD track)",
     "2022 · National Scholarship (Graduate)",
-    "2023 · Beijing Outstanding Graduate; 2020 · Shandong Outstanding Graduate"
+    "2023 · Beijing Outstanding Graduate"
+    "2020 · Shandong Outstanding Graduate",
   ],
   "skills": [
-    "Google Earth Engine (GEE), Python, MATLAB",
+    "Google Earth Engine (GEE)",
+    "Python",
     "ArcGIS"
   ],
   "last_updated": "2025-12-23"
