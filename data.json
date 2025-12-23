@@ -95,7 +95,7 @@
     "note": "2021-10-20",
     "pdf": "https://doi.org/10.1038/s41598-021-00285-8",
     "code": "#"
-  },
+  }
 ],
   "projects": [
     {
@@ -114,8 +114,8 @@
   "awards": [
     "2025 · CAST Young Talent Program (PhD track)",
     "2022 · National Scholarship (Graduate)",
-    "2023 · Beijing Outstanding Graduate"
-    "2020 · Shandong Outstanding Graduate",
+    "2023 · Beijing Outstanding Graduate",
+    "2020 · Shandong Outstanding Graduate"
   ],
   "skills": [
     "Google Earth Engine (GEE)",
