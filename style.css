@@ -1,0 +1,40 @@
+:root{
+  --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#2563eb;
+  --card:#f8fafc; --border:#e5e7eb; --max: 980px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1220; --fg:#e5e7eb; --muted:#9ca3af; --link:#60a5fa;
+    --card:#0f1a2e; --border:#1f2a44;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+a{color:var(--link); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max); margin:0 auto; padding:44px 20px 80px}
+.header{border-bottom:1px solid var(--border); padding-bottom:20px}
+.id{display:flex; gap:18px; align-items:flex-start}
+.avatar{width:84px; height:84px; border-radius:18px; background:var(--card); border:1px solid var(--border);
+  overflow:hidden; display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:12px; flex:0 0 auto}
+.avatar img{width:100%; height:100%; object-fit:cover; display:block}
+h1{margin:0; font-size:30px; line-height:1.15}
+.sub{margin-top:6px; color:var(--muted)}
+.meta{margin-top:10px; color:var(--muted); font-size:14px}
+.links{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+.chip{display:inline-flex; align-items:center; border:1px solid var(--border); background:var(--card); padding:6px 10px; border-radius:999px; font-size:13px}
+.nav{position:sticky; top:0; background:linear-gradient(to bottom, var(--bg), color-mix(in srgb, var(--bg) 88%, transparent)); backdrop-filter: blur(6px); padding:10px 0; margin:10px 0 18px}
+.navrow{display:flex; flex-wrap:wrap; gap:10px}
+.nav a{font-size:13px; color:var(--muted); border:1px solid var(--border); padding:6px 10px; border-radius:999px; background: color-mix(in srgb, var(--card) 90%, transparent)}
+.nav a:hover{color:var(--fg); text-decoration:none}
+section{margin:22px 0 0}
+h2{font-size:18px; margin:18px 0 10px}
+.card{border:1px solid var(--border); background:var(--card); padding:14px; border-radius:16px}
+ul{margin:10px 0 0 18px}
+li{margin:8px 0}
+.k{color:var(--muted); font-variant-numeric: tabular-nums}
+.pub{padding:12px 0; border-top:1px dashed var(--border)}
+.pub:first-child{border-top:0}
+.pub .t{font-weight:650}
+.pub .v{color:var(--muted); font-size:14px}
+.footer{margin-top:34px; padding-top:16px; border-top:1px solid var(--border); color:var(--muted); font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
