@@ -12,7 +12,6 @@
     <header class="header">
       <div class="id">
         <div class="avatar" id="avatarBox">
-          <!-- 放 avatar.jpg 到同目录会自动显示 -->
           <span>Avatar.jpg</span>
         </div>
         <div class="headtext">
@@ -31,7 +30,7 @@
     <section id="news"><h2>News</h2><div class="card" id="newsBox"></div></section>
     <section id="pubs"><h2>Papers</h2><div class="card" id="pubBox"></div></section>
     <section id="projects"><h2>Projects</h2><div class="card" id="projBox"></div></section>
-    <section id="awards"><h2>Rewards</h2><div class="card" id="awardBox"></div></section>
+    <section id="awards"><h2>Awards</h2><div class="card" id="awardBox"></div></section>
     <section id="skills"><h2>Skills</h2><div class="card" id="skillBox"></div></section>
 
     <footer class="footer">
@@ -42,33 +41,57 @@
 
   <script>
     const el = (id) => document.getElementById(id);
+
     const esc = (s) => (s ?? "").toString()
       .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
 
-    function li(items){
+    function ulHTML(items){
       return `<ul>${items.map(x=>`<li>${x}</li>`).join("")}</ul>`;
     }
 
     function navBuild(){
       const items = [
-        ["bio","About me"],["interests","Research Interests"],["news","News"],["pubs","Papers"],
-        ["projects","Projects"],["awards","Rewards"],["skills","Skills"]
+        ["bio","About me"],
+        ["interests","Research Interests"],
+        ["news","News"],
+        ["pubs","Papers"],
+        ["projects","Projects"],
+        ["awards","Awards"],
+        ["skills","Skills"]
       ];
       el("nav").innerHTML = `<div class="navrow">${
         items.map(([id,t])=>`<a href="#${id}">${t}</a>`).join("")
       }</div>`;
     }
 
+    function groupByYear(pubs){
+      const map = new Map();
+      pubs.forEach(p=>{
+        const y = p.year || "Other";
+        if(!map.has(y)) map.set(y, []);
+        map.get(y).push(p);
+      });
+      // sort years desc (numeric first)
+      const years = Array.from(map.keys()).sort((a,b)=>{
+        const na = Number(a), nb = Number(b);
+        if(!Number.isNaN(na) && !Number.isNaN(nb)) return nb - na;
+        return (""+b).localeCompare(""+a);
+      });
+      return years.map(y=>({year:y, items: map.get(y)}));
+    }
+
     async function main(){
       navBuild();
+
       const res = await fetch("data.json", {cache:"no-store"});
+      if(!res.ok) throw new Error(`Failed to fetch data.json (${res.status})`);
       const d = await res.json();
 
-      // Title + header
       document.title = `${d.name_cn || ""} | ${d.title || ""}`.trim();
       el("name").textContent = `${d.name_cn || ""} / ${d.name_en || ""}`.trim();
       el("name2").textContent = d.name_en || d.name_cn || "";
       el("subtitle").textContent = `${d.title || ""} · ${d.affiliation || ""}`.trim();
+
       el("meta").innerHTML = [
         d.location ? `Location: ${esc(d.location)}` : "",
         d.email ? `Email: <a href="mailto:${esc(d.email)}">${esc(d.email)}</a>` : ""
@@ -78,7 +101,7 @@
         `<a class="chip" href="${esc(x.url)}" target="_blank" rel="noreferrer">${esc(x.label)}</a>`
       ).join("");
 
-      // Avatar auto
+      // Avatar
       const img = new Image();
       img.src = "Avatar.jpg";
       img.onload = () => {
@@ -87,51 +110,77 @@
         el("avatarBox").appendChild(img);
       };
 
-      // Sections
-      el("bioBox").innerHTML =
-  (d.bio || []).map(p => `<p>${esc(p)}</p>`).join("") +
-  (
-    (d.supervisors && d.supervisors.length)
-      ? `<p><b>Supervisors:</b> ${
-          d.supervisors.map(s => {
-            const name = esc(s.name || "");
-            const aff  = s.affil ? ` (${esc(s.affil)})` : "";
-            const url  = (s.url || "").trim();
-            return url
-              ? `<a href="${esc(url)}" target="_blank" rel="noreferrer">${name}</a>${aff}`
-              : `${name}${aff}`;
-          }).join(", ")
-        }.</p>`
-      : ""
-  );
+      // About me
+      const bioHTML = (d.bio || []).map(p => `<p>${esc(p)}</p>`).join("");
 
-      el("interestBox").innerHTML = li((d.research_interests||[]).map(x=>esc(x)));
+      const highlightsHTML = (d.highlights && d.highlights.length)
+        ? `<div class="hl">
+             <div class="hlTitle">Research highlights</div>
+             ${ulHTML((d.highlights||[]).map(x=>esc(x)))}
+           </div>`
+        : "";
 
-      el("newsBox").innerHTML = li((d.news||[]).map(n=>`<span class="k">${esc(n.date)}</span> ${esc(n.text)}`));
+      const supervisorsHTML = (d.supervisors && d.supervisors.length)
+        ? `<p class="sup"><b>Supervisors:</b> ${
+            d.supervisors.map(s => {
+              const name = esc(s.name || "");
+              const aff  = s.affil ? ` (${esc(s.affil)})` : "";
+              const url  = (s.url || "").trim();
+              return url
+                ? `<a href="${esc(url)}" target="_blank" rel="noreferrer">${name}</a>${aff}`
+                : `${name}${aff}`;
+            }).join(", ")
+          }.</p>`
+        : "";
 
-      // Publications grouped by year
-      const pubs = (d.publications || []).slice().sort((a,b)=>(b.year||0)-(a.year||0));
-      el("pubBox").innerHTML = pubs.map(p=>{
-        const links = [
-          p.pdf && p.pdf !== "#" ? `<a href="${esc(p.pdf)}" target="_blank" rel="noreferrer">PDF</a>` : "",
-          p.code && p.code !== "#" ? `<a href="${esc(p.code)}" target="_blank" rel="noreferrer">Code</a>` : ""
-        ].filter(Boolean).join(" · ");
+      el("bioBox").innerHTML = bioHTML + highlightsHTML + supervisorsHTML;
+
+      // Interests
+      el("interestBox").innerHTML = ulHTML((d.research_interests||[]).map(x=>esc(x)));
+
+      // News
+      el("newsBox").innerHTML = ulHTML((d.news||[]).map(n=>`<span class="k">${esc(n.date)}</span> ${esc(n.text)}`));
+
+      // Publications (grouped by year)
+      const pubs = (d.publications || []).slice()
+        .sort((a,b)=>(b.year||0)-(a.year||0));
+
+      const grouped = groupByYear(pubs);
+
+      el("pubBox").innerHTML = grouped.map(g=>{
+        const itemsHTML = g.items.map(p=>{
+          const links = [
+            p.pdf && p.pdf !== "#" ? `<a class="pill" href="${esc(p.pdf)}" target="_blank" rel="noreferrer">DOI</a>` : "",
+            p.code && p.code !== "#" ? `<a class="pill" href="${esc(p.code)}" target="_blank" rel="noreferrer">Code</a>` : ""
+          ].filter(Boolean).join("");
+
+          return `
+            <div class="pub">
+              <div class="t">${esc(p.title)}</div>
+              <div class="v">
+                ${esc(p.authors)} · <i>${esc(p.venue)}</i> (${esc(p.year)})${p.note ? ` · ${esc(p.note)}` : ""}
+                ${links ? `<span class="pubLinks">${links}</span>` : ""}
+              </div>
+            </div>`;
+        }).join("");
+
         return `
-          <div class="pub">
-            <div class="t">${esc(p.title)}</div>
-            <div class="v">${esc(p.authors)} · <i>${esc(p.venue)}</i> (${esc(p.year)}) ${p.note? "· "+esc(p.note):""}
-              ${links ? "· " + links : ""}
-            </div>
+          <div class="yearGroup">
+            <div class="yearHead">${esc(g.year)}</div>
+            <div class="yearBody">${itemsHTML}</div>
           </div>`;
       }).join("");
 
-      el("projBox").innerHTML = li((d.projects||[]).map(p=>{
+      // Projects
+      el("projBox").innerHTML = ulHTML((d.projects||[]).map(p=>{
         const a = p.link && p.link !== "#" ? ` <a href="${esc(p.link)}" target="_blank" rel="noreferrer">Link</a>` : "";
+        // role inline, more CV-like
         return `<b>${esc(p.title)}</b> — <span class="k">${esc(p.role||"")}</span><br/>${esc(p.desc||"")}${a}`;
       }));
 
-      el("awardBox").innerHTML = li((d.awards||[]).map(x=>esc(x)));
-      el("skillBox").innerHTML = li((d.skills||[]).map(x=>esc(x)));
+      // Awards & Skills
+      el("awardBox").innerHTML = ulHTML((d.awards||[]).map(x=>esc(x)));
+      el("skillBox").innerHTML = ulHTML((d.skills||[]).map(x=>esc(x)));
 
       el("year").textContent = new Date().getFullYear();
       el("updated").textContent = d.last_updated || "";
