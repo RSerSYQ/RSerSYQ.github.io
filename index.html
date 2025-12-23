@@ -88,7 +88,22 @@
       };
 
       // Sections
-      el("bioBox").innerHTML = (d.bio || []).map(p=>`<p>${esc(p)}</p>`).join("");
+      el("bioBox").innerHTML =
+  (d.bio || []).map(p => `<p>${esc(p)}</p>`).join("") +
+  (
+    (d.supervisors && d.supervisors.length)
+      ? `<p><b>Supervisors:</b> ${
+          d.supervisors.map(s => {
+            const name = esc(s.name || "");
+            const aff  = s.affil ? ` (${esc(s.affil)})` : "";
+            const url  = (s.url || "").trim();
+            return url
+              ? `<a href="${esc(url)}" target="_blank" rel="noreferrer">${name}</a>${aff}`
+              : `${name}${aff}`;
+          }).join(", ")
+        }.</p>`
+      : ""
+  );
 
       el("interestBox").innerHTML = li((d.research_interests||[]).map(x=>esc(x)));
 
