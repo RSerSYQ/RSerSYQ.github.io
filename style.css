@@ -1,11 +1,13 @@
 :root{
   --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#2563eb;
   --card:#f8fafc; --border:#e5e7eb; --max: 980px;
+  --shadow: 0 1px 10px rgba(0,0,0,.04);
 }
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0b1220; --fg:#e5e7eb; --muted:#9ca3af; --link:#60a5fa;
     --card:#0f1a2e; --border:#1f2a44;
+    --shadow: 0 1px 12px rgba(0,0,0,.25);
   }
 }
 *{box-sizing:border-box}
@@ -29,14 +31,60 @@ h1{margin:0; font-size:30px; line-height:1.15}
 .nav a:hover{color:var(--fg); text-decoration:none}
 section{margin:22px 0 0}
 h2{font-size:18px; margin:18px 0 10px}
-.card{border:1px solid var(--border); background:var(--card); padding:14px; border-radius:16px}
+.card{border:1px solid var(--border); background:var(--card); padding:14px; border-radius:16px; box-shadow: var(--shadow)}
 ul{margin:10px 0 0 18px}
 li{margin:8px 0}
 .k{color:var(--muted); font-variant-numeric: tabular-nums}
+.footer{margin-top:34px; padding-top:16px; border-top:1px solid var(--border); color:var(--muted); font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
+
+/* About: supervisors as secondary info */
+#bioBox p.sup { font-size: 15px; color: var(--muted); margin-top: 10px; }
+#bioBox p.sup a { font-weight: 600; }
+#bioBox a { font-weight: 600; }
+
+/* Highlights block */
+.hl{
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+}
+.hlTitle{
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: .2px;
+  margin-bottom: 6px;
+}
+
+/* Publications */
+.yearGroup{margin-top: 10px;}
+.yearHead{
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 8px 0 6px;
+}
+.yearBody{
+  border-left: 2px solid color-mix(in srgb, var(--border) 70%, transparent);
+  padding-left: 12px;
+}
+
 .pub{padding:12px 0; border-top:1px dashed var(--border)}
 .pub:first-child{border-top:0}
 .pub .t{font-weight:650}
 .pub .v{color:var(--muted); font-size:14px}
-.footer{margin-top:34px; padding-top:16px; border-top:1px solid var(--border); color:var(--muted); font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
-#bioBox a { font-weight: 600; }
 
+.pubLinks{display:inline-flex; gap:8px; margin-left: 8px; vertical-align: middle;}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 90%, transparent);
+  font-size: 12px;
+  color: var(--link);
+  text-decoration: none;
+}
+.pill:hover{ text-decoration: underline; }
